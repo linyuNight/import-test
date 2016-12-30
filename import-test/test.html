@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		@import url(./test.css)
+	</style>
+	<!-- <link rel="stylesheet" type="text/css" href="./test.css"> -->
+</head>
+<body>
+	<div id="aa">aaa</div>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			// alert(1);
+			// $(".aa").css("background","red");
+
+			// var aa = document.getElementById("aa");
+			// aa.style.color = "red";
+
+			// $("#aa").click(function(){
+			// 	$(this).slideDown();
+			// })
+
+			$("#aa").click(function(){
+				window.open('test2.php', '', 'width=0,height=0,top=5000,left=5000,scrollbars=0,resizable=1,status=0');
+			})
+			document.title="new"
+			document.title.style.color="red"
+		})
+	</script>
+	<!-- <script language="JavaScript"> 
+		setTimeout('flash_title()',2000); //2秒之后调用一次
+		function flash_title() 
+		{ 
+		  //当窗口效果为最小化，或者没焦点状态下才闪动
+		  if(isMinStatus() || !window.focus)
+		  {
+		    newMsgCount();
+		  }
+		  else
+		  {
+		    document.title='订单管理中心-AOOXING';//窗口没有消息的时候默认的title内容
+		    window.clearInterval();
+		  }
+		} 
+		//消息提示
+		var flag=false;
+		function newMsgCount(){
+		  if(flag){
+		    flag=false;
+		    document.title='【新订单】';
+		  }else{
+		    flag=true;
+		    document.title='【　　　】';
+		  }
+		  window.setTimeout('flash_title(0)',380); 
+		}
+		//判断窗口是否最小化
+		//在Opera中还不能显示
+		var isMin = false;
+		function isMinStatus() {
+		  //除了Internet Explorer浏览器，其他主流浏览器均支持Window outerHeight 和outerWidth 属性
+		  if(window.outerWidth != undefined && window.outerHeight != undefined){
+		    isMin = window.outerWidth <= 160 && window.outerHeight <= 27;
+		  }else{
+		    isMin = window.outerWidth <= 160 && window.outerHeight <= 27;
+		  }
+		  //除了Internet Explorer浏览器，其他主流浏览器均支持Window screenY 和screenX 属性
+		  if(window.screenY != undefined && window.screenX != undefined ){
+		    isMin = window.screenY < -30000 && window.screenX < -30000;//FF Chrome       
+		  }else{
+		    isMin = window.screenTop < -30000 && window.screenLeft < -30000;//IE
+		  }
+		  return isMin;
+		}
+	</script> -->
+</body>
+</html>
